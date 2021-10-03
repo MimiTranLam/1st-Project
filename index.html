@@ -15,35 +15,80 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <nav>
         <div class="nav-container">
           
             <div class="nav-top">
               <ul>
-            <li><a href="Explore">Explore</a></li>
-            <li><a href="Map">Map</a></li>
+                <li><a href="Explore">Explore</a></li>
+                <li><a href="Map">Map</a></li>
               </ul>
 
-            <button id="logo-name"onclick="top()"><img src="./images/logo-name.png" alt="Name" style="width:150px; height:auto;"></button>
-            <img id="logo-center" src="./images/logo-center.png" alt="Logo" style="width:30px; height:auto;">
+                <button id="logo-name"onclick="top()"><img src="./images/logo-name.png" alt="Name" style="width:150px; height:auto;"></button>
+                <img id="logo-center" src="./images/logo-center.png" alt="Logo" style="width:30px; height:auto;">
 
-            <ul>
-            <li><a href="About">About</a></li>
-            <li><a href="Contact">Contact</a></li>
-            <!-- <div class="indicator"></div> -->
-          </ul>
-        </div>
+                <ul>
+                    <li><a href="About">About</a></li>
+                    <li><a href="Contact">Contact</a></li>
+                    <!-- <div class="indicator"></div> -->
+                </ul>
+            </div>
 
             <div class="nav-bottom">
-            <a href="english"><i class="icon fas fa-globe-americas"></i>EN</a>
-            <a href="vietnamese"><i class="icon fas fa-globe-asia"></i>VN</a>
-          </div>
+                <a href="english"><i class="icon fas fa-globe-americas"></i>EN</a>
+                <a href="vietnamese"><i class="icon fas fa-globe-asia"></i>VN</a>
+            </div>
 
-    </div>
-      </nav>
+        </div>
+    </nav>
 
-      <main>
+    <main>
+        <section class="general-info">
+            <div class="container-fluid jumbotron jumbotron-fluid general-page">
+                <div class="container">
+                <h1 class="display-4">Welcome to the South of Vietnam!</h1>
+                <p class="paragraph">Vietnam is a curved, S-shaped country with many scenic 
+                    spots of natural beauty and unique culture,which is a great destination in 
+                    the eyes of tourists. The North has Sapa, Ha Giang, Ninh Binh, and Ha Long.
+                    Central region has Hue, Quang Binh and Da Nang. The South has Ho Chi Minh, 
+                    Phu Quoc, the Mekong Delta… From the intoxicating history and culture, 
+                    stunning natural beauty, enjoyable beach holiday to an interesting fisherman 
+                    experience, this hottest destination in Southeast Asia just has something 
+                    for everyone.
+                    <li>Where have you been?</li>
+                </p>
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="images/1631415.jpeg" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="images/wp4190078.jpeg" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="images/Main-Banner-HC-1920x1080-1.jpeg" alt="Third slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="images/videoblocks-4k-timelapse-sequence-of-hanoi-vietnam-hanois-traffic-at-night_bogvtqgyc7_thumbnail-1080_01.png" alt="Fourth slide">
+                    </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </section>
         <section id="mission">
             <div class="container">
                 <div class="text">
@@ -52,7 +97,7 @@
                   <div class="description">for the child at heart who still wants some fun.</div>
                 </div>
             </div>
-          </section>
+        </section>
     
         <section id="about">
             <div class="container">
@@ -89,6 +134,56 @@
                 </div>
         </section>
     </main>
-    
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="row footer-left">
+                    <div class="img-div">
+                        <img src="images/easter-egg.png" width="69"/>
+                    </div>
+                    <div class="column">
+                        <div class="footer-heading">Company</div>
+                        <a href="#">About</a>
+                        <a href="#">Jobs</a>
+                        <a href="#">Address</a>
+                    </div>
+                    <div class="column">
+                    <div class="footer-heading">Communities</div>
+                        <a href="#">Restaurant</a>
+                        <a href="#">Bars</a>  
+                        <a href="#">Cafes</a>
+                        <a href="#">Shops</a>
+                        <a href="#">Arts</a>    
+                    </div>
+                    <div class="column">
+                        <div class="footer-heading">Contact</div>
+                        <a href="#">Support</a>
+                        <a href="#">Number: 0123456789</a>
+                        <a href="#">EasterinSaigon@gmail.com</a>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <a href="#">
+                        <img src="images/fb.png" width="50">
+                    </a>
+                    <a href="#">
+                        <img src="images/ig.png" width="50">
+                    </a>
+                    <a href="#">
+                        <img src="images/whatsapp.png" width="50">
+                    </a>
+                </div>
+            </div>
+            <div class="row2">Vietnam <img src="images/VN.png" width="20" /></div>
+            <div class="row row3">
+                <a href="#">Legal</a>
+            </div>
+            <div>2021 Easter in Saigon</div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>

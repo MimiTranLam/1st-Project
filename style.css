@@ -23,12 +23,12 @@ button {
 
 section {
     margin: 0 auto;
-    min-height: 100vh;
+    /* min-height: 100vh;
     max-width: 100vw;
     color: black;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 
 /* nav */

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
+    <title>Start-up Project</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/27d29ffcb6.js" crossorigin="anonymous"></script>
@@ -15,39 +15,45 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	
+
   <nav>
     <div class="nav-container">
       <div class="nav-top">
-        <ul>
-          <li><a href="Explore">Explore</a></li>
-          <li><a href="Map">Map</a></li>
-        </ul>
+        <div class="link-wrapper">
+          <a class="nav-link" href="#general-info"><span>Explore</span></a>
+        </div>
+        <div class="link-wrapper">
+          <a class="nav-link" href="#map"><span>Map</span></a>
+        </div>
 
         <button onclick="topFunction()" id="logo-name"><img src="./images/logo-name.png" alt="Name" style="width:150px; height:auto;"></button>   
-        <div id="logo-center-box"><img id="logo-center" src="./images/logo-center.png" alt="Logo" style="width:30px; height:auto;"></div>
+        <div id="logo-center-box">
+          <a href="#motto" type=button onclick="languages()"><img id="logo-center" src="./images/logo-center.png" alt="Logo" style="width:30px; height:auto;"></a>
+        </div>
 
-        <ul>
-          <li><a href="About">About</a></li>
-          <li><a href="Contact">Contact</a></li>
-          <!-- <div class="indicator"></div> -->
-        </ul>        
+        <div class="link-wrapper">
+          <a class="nav-link" href="#about"><span>About</span></a>
+        </div>
+        <div class="link-wrapper">
+          <a class="nav-link" href="#contact"><span>Contact</span></a>
+        </div>
       </div>
 
-      <div class="nav-bottom">
+      <div class="nav-bottom" onclick="languages()">
         <a href="english"><i class="icon fas fa-globe-americas"></i>EN</a>
         <a href="vietnamese"><i class="icon fas fa-globe-asia"></i>VN</a>
       </div>
     </div>
   </nav>
 
+
   <main>
-    <section class="motto" style="width: 100vw;height: 75vh;">
-      <div class="container">
-        <div class="text">
+    <section id="motto" style="width: 100vw;height: 75vh;">
+      <div class="motto-container">
+        <div class="motto-content">
           <div id="motto-box"></div>
 
-          <div class="title1">OUR MOTTO</div>
+          <div class="title">OUR MOTTO</div>
 
           <div class="motto-text">
             <div class="speech-marks1"><i class="fas fa-quote-left"></i></div>
@@ -59,7 +65,7 @@
       </div>
     </section>
 
-    <section class="general-info">
+    <section id="general-info">
       <div class="container-fluid jumbotron jumbotron-fluid general-page">
         <div class="container">
          <h1 class="display-4">Welcome to the South of Vietnam!</h1>
@@ -106,7 +112,7 @@
             </div>
         </section>
     	
-    <section class="main map">
+    <section class="main map" style="height:75vh;">
         <div class="content">
             <span>Looking for new hidden places in Saigon?</span>
             <h1>Easter Eggs in Saigon</h1>
@@ -248,32 +254,32 @@
         </div>
     </section>
 
-    <section class="about" style="width: 100vw;height: 90vh;">
-      <div class="about-container">
-        <div class="title2">ABOUT US</div> 
-    
-        <div class="cards-container">
+    <section id="about" style="width: 100vw;height: 100vh;">
+        <div class="about-container">
+          <div class="title2">ABOUT US</div> 
+      
+          <div class="cards-container">
+            <div class="card" style="width: 18rem;">
+              <i class="fas fa-egg card-icon" style="color:#B0E3EB;font-size:170%;"></i>
+              <h1 class="card-title" style="color:#FA4A26;">NAME</h1>
+              <p class="card-text">Info</p>
+            </div>
+      
           <div class="card" style="width: 18rem;">
-            <i class="fas fa-egg card-icon" style="color:grey;font-size:150%;"></i>
-            <h2 class="card-title">NAME</h2>
+            <i class="fas fa-egg card-icon" style="color:#DAE955;font-size:170%;"></i>
+            <h1 class="card-title" style="color:#B0E3EB;">NAME</h1>
             <p class="card-text">Info</p>
           </div>
-    
-        <div class="card" style="width: 18rem;">
-          <i class="fas fa-egg card-icon" style="color:grey;font-size:150%;"></i>
-          <h2 class="card-title">NAME</h2>
-          <p class="card-text">Info</p>
+      
+          <div class="card" style="width: 18rem;">
+            <i class="fas fa-egg card-icon" style="color:#FA4A26;font-size:170%;"></i>
+            <h1 class="card-title" style="color:#DAE955;">NAME</h1>
+            <p class="card-text">Info</p>
+          </div>
+  
+          </div>
         </div>
-    
-        <div class="card" style="width: 18rem;">
-          <i class="fas fa-egg card-icon" style="color:grey;font-size:150%;"></i>
-          <h2 class="card-title">NAME</h2>
-          <p class="card-text">Info</p>
-        </div>
-
-        </div>
-      </div>
-    </section>
+      </section>
 
     <section id="contact">
         <div class="container">

@@ -6,6 +6,9 @@ body {
     font-family: 'Raleway';
     margin: 0;
     padding: 0;
+    letter-spacing: normal;
+    font-size: 14px;
+    line-height: 18px;
 }
 
 * {
@@ -25,21 +28,8 @@ button {
     border: none;
 }
 
-* {
-    box-sizing: border-box;
-}
-
-a {
-    text-decoration-line: none;
-}
-
-a:hover {
-    text-decoration-line: none;  
-}
-
-button {
-    background-color: transparent;
-    border: none;
+main {
+	margin-top: 184px;
 }
 
 /* nav */
@@ -62,16 +52,15 @@ nav {
     justify-content: space-around;
     align-items: center;
     flex: 1;
-	background: rgba(255, 255, 255, 0.7);
+    background: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0))
 }
 
 /* nav top row */
 .nav-top {
-    position: relative;
     margin: 0;
     padding: 0;
     top: 0px;
-    width: 100vw;
+    width: 90vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -95,7 +84,7 @@ nav {
     0%, 7% {
   transform: rotateZ(0);}
     15% {transform: rotateZ(-15deg);}
-    20% {transform: rotateZ(10deg);}
+    20% {transform: rotateZ(10deg);width: 6%;}
     25% {transform: rotateZ(-10deg);}
     30% {transform: rotateZ(6deg);}
     35% {transform: rotateZ(-4deg);}
@@ -107,52 +96,76 @@ nav button:hover {
 }
 
 /* nav links */
-nav ul {
+nav a {
     padding: 0;
     margin: 0;
     position: relative;
     text-transform: uppercase;
     font-size: 1.2rem;
+    color: black;
     flex: 1;
-    list-style: none;
     display: flex;
     justify-content: space-around;
 }
 
-ul a {
-    padding: auto;
-    color: black;
-    text-decoration: none;
+nav a:hover {
+    color: rgb(255,215,0);
 }
 
-ul a:hover {
+.nav-link {
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    color: #333;
+    letter-spacing: 2px;
+    transition: all .35s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.nav-link span {
+    position: relative;
+    z-index: 2;
+}
+
+.nav-link:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    transition: all .35s;
+    border: 2px solid #F5BD38;
+}
+  
+.nav-link:hover {
     color: rgb(255,215,0);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(255,215,0);
+}
+  
+.nav-link:hover:after {
+    width: 100%;
 }
 
 /* nav bottom row */
 .nav-bottom {
-    width: 100px;
-    display: flex;
-    justify-content: space-between;
+    display: none;
 }
 
 .nav-bottom a {
     color: #D0D1D4;
     font-size: 0.8em;
     font-weight: bold;
+    padding: 0 10px;
 }
 
 .nav-bottom .icon {
     padding-right: 2px;
 }
-
-/*
-.indicator {
-    position: absolute;
-    z-index: -2;
-    background-color: lightcoral;
-}
-*/
 
 /* our mission */
 section .motto{
@@ -161,84 +174,92 @@ section .motto{
     color: black;
 }
 
-.motto .container {
+.motto-container {
     max-width: 90%;
     height: inherit;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
-.motto .text {
-    padding-bottom: 125px;
+.motto-content {
+    position: relative;
+    padding-bottom: 15vh;
+    width: 50vw;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-basis: 50%;
-    line-height: 4em;
+    line-height: 2.5em;
 }
 
-.motto #motto-box {
-    bottom: 150px;
-    width: 60vw;
-    height: 290px;
+#motto #motto-box {
+    margin-top: 12vh;
+    width: 50vw;
+    height: 44vh;
     z-index: -10;
     position: absolute;
     border: 0.5px solid rgb(200, 200, 200);
 }
 
-.motto .speech-marks1 {
+#motto .speech-marks1 {
     font-size: 4rem;
     color: white;
     position: absolute;
-    left: 300px;
-    top: 240px;
-    text-shadow: 3px 3px grey;
+    left: 10px;
+    top: -10px;
+    text-shadow: 3px 3px rgb(50, 50, 50);
 }
 
-.motto .speech-marks2 {
+#motto .speech-marks2 {
     font-size: 4rem;
     color: white;
     position: absolute;
-    right: 300px;
-    bottom: 127px;
-    text-shadow: 3px 3px grey;
+    right: 10px;
+    bottom: 15px;
+    text-shadow: 3px 3px rgb(50, 50, 50);
 }
 
-.motto .title1 {
+#motto .title {
+    padding-bottom: 20vh;
     font-size: 1rem;
     font-weight: 500;
+    letter-spacing: 4px;
     color: grey;
-    padding: 0 10px 30px;
+    padding: 0 10px 0;
     background-color: white;
 }
 
-.motto .motto-text {
+#motto .motto-text {
     font-weight: bold;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 5% 10%;
 }
 
-.motto #description {
-    font-size: 2rem;
-    color: black;
+#motto #description {
+    font-size: 2vw;
+    line-height: 6rem;
+    color: rgb(50, 50, 50);
 }
 
-.motto #fun {
-    font-size: 5rem;
+#motto #fun {
+    font-size: 8vw;
     text-transform: uppercase;
-    padding: 50px 0;
+    padding: 3vh 0 0;
     color: rgb(255,215,0);
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: rgb(255,215,0);
 }
 
 /* about us */
-section .about{
+section #about{
     margin: 0 auto;
     color: black;
 }
@@ -254,13 +275,16 @@ section .about{
     text-align: center;
 }
 
-.about .title2 {
-    color: black;
-    font-size: 3.5rem;
+#about .title2 {
+    color: gray;
+    font-size: 1.75rem;
+    letter-spacing: 4px;
     padding: 1.5rem 0;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: gray;
 }
 
-.about .cards-container {
+#about .cards-container {
     width: 80%;
     margin-top: 3rem;
     display: flex;
@@ -269,10 +293,10 @@ section .about{
 }
 
 .card {
-    margin-bottom: 32px;
+    margin: 0 20px 32px;
     width: 30vw;
     height: 30vh;
-    border: 4px solid grey;
+    border: 4px solid rgb(50,50,50);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -297,93 +321,6 @@ section .about{
 .cards-container {
     display: flex;
     justify-content: space-between;
-}
-
-main {
-	margin-top: 184px;
-}
-
-.display-4 {
-    font-weight: bold;
-}
-.jumbotron {
-    background-color:whitesmoke;
-}
-footer {
-	background-color: black;
-	color: white;
-	padding-top: 80px;
-	padding-bottom: 50px;
-}
-
-footer a {
-	color: white;
-}
-
-.row {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-}
-
-.column {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-}
-
-.column * {
-	padding-top: 3px;
-	padding-bottom: 15px;
-}
-
-.footer-left {
-	flex-basis: 60%;
-}
-
-.footer-heading {
-	color: #919496;
-	font-size: 12px;
-	font-weight: 900;
-	line-height: 1.4;
-	letter-spacing: 0.08em;
-	text-transform: uppercase;
-}
-
-.footer-right a {
-	margin-left: 20px;
-}
-
-.footer-right img {
-	padding: 10px;
-	border-radius: 50%;
-	background-color: #222326;
-}
-
-footer .row2 {
-	text-align: end;
-	margin-top: 50px;
-	margin-bottom: 20px;
-}
-
-footer .row3 {
-	color: #919496;
-	font-size: 12px;
-}
-
-.footer-bottom-links {
-	flex-basis: 60%;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-}
-
-body{
-	font-family: 'Raleway', sans-serif;
-	margin: 0;
-	letter-spacing: normal;
-	font-size: 14px;
-	line-height: 18px;
 }
 
 .main{
@@ -526,12 +463,13 @@ body{
 	flex-direction:column;
 	justify-content: center;
 	align-items: center;
-	padding: 10px ;
+	padding: 10px;
 }
 
 #contact h3{
 	text-transform: uppercase;
 	text-align: center;
+    letter-spacing: 4px;
 }
 
 #contact .contact-form {
@@ -572,5 +510,81 @@ body{
 }
 #contact button:hover {
 		color: black;
-	  background-color: rgb(255, 254, 172);
+	  background-color: rgb(255, 215, 0);
+}
+
+/* footer */
+.display-4 {
+    font-weight: bold;
+}
+.jumbotron {
+    background-color:whitesmoke;
+}
+footer {
+	background-color: black;
+	color: white;
+	padding-top: 80px;
+	padding-bottom: 50px;
+}
+
+footer a {
+	color: white;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.column {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+
+.column * {
+	padding-top: 3px;
+	padding-bottom: 15px;
+}
+
+.footer-left {
+	flex-basis: 60%;
+}
+
+.footer-heading {
+	color: #919496;
+	font-size: 12px;
+	font-weight: 900;
+	line-height: 1.4;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.footer-right a {
+	margin-left: 20px;
+}
+
+.footer-right img {
+	padding: 10px;
+	border-radius: 50%;
+	background-color: #222326;
+}
+
+footer .row2 {
+	text-align: end;
+	margin-top: 50px;
+	margin-bottom: 20px;
+}
+
+footer .row3 {
+	color: #919496;
+	font-size: 12px;
+}
+
+.footer-bottom-links {
+	flex-basis: 60%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }

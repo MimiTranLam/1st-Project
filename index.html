@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
+    <title>Start-up Project</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/27d29ffcb6.js" crossorigin="anonymous"></script>
@@ -12,42 +12,64 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200&display=swap" rel="stylesheet">
     <script type="text/javascript" src="main.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dev2.css">
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-          
-            <div class="nav-top">
-              <ul>
-                <li><a href="Explore">Explore</a></li>
-                <li><a href="Map">Map</a></li>
-              </ul>
 
-                <button id="logo-name"onclick="top()"><img src="./images/logo-name.png" alt="Name" style="width:150px; height:auto;"></button>
-                <img id="logo-center" src="./images/logo-center.png" alt="Logo" style="width:30px; height:auto;">
-
-                <ul>
-                    <li><a href="About">About</a></li>
-                    <li><a href="Contact">Contact</a></li>
-                    <!-- <div class="indicator"></div> -->
-                </ul>
-            </div>
-
-            <div class="nav-bottom">
-                <a href="english"><i class="icon fas fa-globe-americas"></i>EN</a>
-                <a href="vietnamese"><i class="icon fas fa-globe-asia"></i>VN</a>
-            </div>
-
+  <nav>
+    <div class="nav-container">
+      <div class="nav-top">
+        <div class="link-wrapper">
+          <a class="nav-link" href="#general-info"><span>Explore</span></a>
         </div>
-    </nav>
+        <div class="link-wrapper">
+          <a class="nav-link" href="#map"><span>Map</span></a>
+        </div>
 
-    <main>
-        <section class="general-info">
-            <div class="container-fluid jumbotron jumbotron-fluid general-page">
-                <div class="container">
-                <h1 class="display-4">Welcome to the South of Vietnam!</h1>
-                <p class="paragraph">Vietnam is a curved, S-shaped country with many scenic 
+        <button onclick="topFunction()" id="logo-name"><img src="./images/logo-name.png" alt="Name" style="width:150px; height:auto;"></button>   
+        <div id="logo-center-box">
+          <a href="#motto" type=button onclick="languages()"><img id="logo-center" src="./images/logo-center.png" alt="Logo" style="width:30px; height:auto;"></a>
+        </div>
+
+        <div class="link-wrapper">
+          <a class="nav-link" href="#about"><span>About</span></a>
+        </div>
+        <div class="link-wrapper">
+          <a class="nav-link" href="#contact"><span>Contact</span></a>
+        </div>
+      </div>
+
+      <div class="nav-bottom" onclick="languages()">
+        <a href="english"><i class="icon fas fa-globe-americas"></i>EN</a>
+        <a href="vietnamese"><i class="icon fas fa-globe-asia"></i>VN</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <main>
+    <section id="motto" style="width: 100vw;height: 75vh;">
+      <div class="motto-container">
+        <div class="motto-content">
+          <div id="motto-box"></div>
+
+          <div class="title">OUR MOTTO</div>
+
+          <div class="motto-text">
+            <div class="speech-marks1"><i class="fas fa-quote-left"></i></div>
+            <div class="speech-marks2"><i class="fas fa-quote-right"></i></div>
+              <div id="description"> For the child at heart who still wants some </div>
+                <div id="fun">fun.</div>
+          </div> 
+        </div>
+      </div>
+    </section>
+
+    <section id="general-info">
+      <div class="container-fluid jumbotron jumbotron-fluid general-page">
+        <div class="container">
+         <h1 class="display-4">Welcome to the South of Vietnam!</h1>
+         <p class="paragraph">Vietnam is a curved, S-shaped country with many scenic 
                     spots of natural beauty and unique culture,which is a great destination in 
                     the eyes of tourists. The North has Sapa, Ha Giang, Ninh Binh, and Ha Long.
                     Central region has Hue, Quang Binh and Da Nang. The South has Ho Chi Minh, 
@@ -55,18 +77,18 @@
                     stunning natural beauty, enjoyable beach holiday to an interesting fisherman 
                     experience, this hottest destination in Southeast Asia just has something 
                     for everyone.
-                    <li>Where have you been?</li>
-                </p>
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img class="d-block w-100" src="images/1631415.jpeg" alt="First slide">
+         <li>Where have you been?</li>
+         </p>
+         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+         <ol class="carousel-indicators">
+         	<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+       	 	<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+         	<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+         	<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+         </ol>
+         	<div class="carousel-inner">
+                	<div class="carousel-item active">
+                        	<img class="d-block w-100" src="images/1631415.jpeg" alt="First slide">
                     </div>
                     <div class="carousel-item">
                         <img class="d-block w-100" src="images/wp4190078.jpeg" alt="Second slide">
@@ -89,53 +111,8 @@
                 </div>
             </div>
         </section>
-        <section id="mission">
-            <div class="container">
-                <div class="text">
-                  <div class="title1"><hr style="width:20%;color: black;margin-top:10px;margin-right:10px;">OUR MISSION/MOTTO<hr style="width:20%;color: black;margin-top:10px;margin-left:10px;"></div>
-                  <div class="title2">' ' for the child at heart who still wants some fun. ' '</div> 
-                  <div class="description">for the child at heart who still wants some fun.</div>
-                </div>
-            </div>
-        </section>
-    
-        <section id="about">
-            <div class="container">
-                <div class="about-content">
-                    <div class="title2">ABOUT US</div> 
-    
-                    <div class="cards-container">
-                        <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="" alt="about-img1">
-                        <div class="card-body" style="width: 18rem">
-                          <h3 class="card-title">Name</h3>
-                          <p class="card-text">Info</p>
-                            </div>
-                            </div>
-    
-                          <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="" alt="about-img2">
-                            <div class="card-body" style="width: 18rem">
-                              <h3 class="card-title">Name</h3>
-                              <p class="card-text">Info</p>
-                            </div>
-                            </div>
-    
-                              <div class="card" style="width: 18rem;">
-                                <img class="card-img-top" src="" alt="about-img3">
-                                <div class="card-body" style="width: 18rem">
-                                  <h3 class="card-title">Name</h3>
-                                  <p class="card-text">Info</p>
-                                </div>
-                                </div>
-                    </div>
-    
-                    </div>
-                </div>
-        </section>
-        
-    </main>
-    <section class="main map">
+    	
+    <section class="main map" style="height:75vh;">
         <div class="content">
             <span>Looking for new hidden places in Saigon?</span>
             <h1>Easter Eggs in Saigon</h1>
@@ -158,8 +135,8 @@
                         </div>
                         <div class="separator"></div>
                         <div class="description">
-                            <div class="greytext">582/12 Huynh Tan Phat, Tan Phu, District 7, HCMC</div>
-                            <div class="price">$$</div>
+                        	<div class="greytext">582/12 Huynh Tan Phat, Tan Phu, District 7, HCMC</div>
+                           	<div class="price">$$</div>
                         </div>
 
                         <div class="social_media">
@@ -276,6 +253,34 @@
             </div>
         </div>
     </section>
+
+    <section id="about" style="width: 100vw;height: 100vh;">
+        <div class="about-container">
+          <div class="title2">ABOUT US</div> 
+      
+          <div class="cards-container">
+            <div class="card" style="width: 18rem;">
+              <i class="fas fa-egg card-icon" style="color:#B0E3EB;font-size:170%;"></i>
+              <h1 class="card-title" style="color:#FA4A26;">NAME</h1>
+              <p class="card-text">Info</p>
+            </div>
+      
+          <div class="card" style="width: 18rem;">
+            <i class="fas fa-egg card-icon" style="color:#DAE955;font-size:170%;"></i>
+            <h1 class="card-title" style="color:#B0E3EB;">NAME</h1>
+            <p class="card-text">Info</p>
+          </div>
+      
+          <div class="card" style="width: 18rem;">
+            <i class="fas fa-egg card-icon" style="color:#FA4A26;font-size:170%;"></i>
+            <h1 class="card-title" style="color:#DAE955;">NAME</h1>
+            <p class="card-text">Info</p>
+          </div>
+  
+          </div>
+        </div>
+      </section>
+
     <section id="contact">
         <div class="container">
             <h3 class="text">CONTACT US
@@ -312,12 +317,13 @@
             </form>
         </div>
     </section>
+
     <footer id="footer">
         <div class="container">
             <div class="row">
                 <div class="row footer-left">
                     <div class="img-div">
-                        <img src="images/easter-egg.png" width="69"/>
+                        <img src="./images/logo-center.png" alt="Logo" style="width:69px; height:auto;">
                     </div>
                     <div class="column">
                         <div class="footer-heading">Company</div>
